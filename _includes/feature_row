@@ -30,8 +30,15 @@
             </div>
           {% endif %}
 
+          {% if f.buttons %}
+            <p>
+            {% for b in f.buttons %}
+              <a href="{{ b.url | relative_url }}" class="btn {{ b.btn_class }}" target="{{ b.btn_target}}">{{ b.btn_label | default: site.data.ui-text[site.locale].more_label | default: "Learn More" }}</a>
+            {% endfor %}
+            </p>
+          {% endif %}
           {% if f.url %}
-            <p><a href="{{ f.url | relative_url }}" class="btn {{ f.btn_class }}">{{ f.btn_label | default: site.data.ui-text[site.locale].more_label | default: "Learn More" }}</a></p>
+            <p><a href="{{ f.url | relative_url }}" class="btn {{ f.btn_class }}" target="{{ f.btn_target}}">{{ f.btn_label | default: site.data.ui-text[site.locale].more_label | default: "Learn More" }}</a></p>
           {% endif %}
         </div>
       </div>
