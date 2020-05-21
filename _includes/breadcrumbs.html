@@ -28,8 +28,14 @@
         <li class="current">{{ page.title }}</li>
       {% else %}
         {% assign i = i | plus: 1 %}
+        {% assign crumb_path = crumb | downcase | replace: '%20', '-' | append: '/' | prepend: path_type | prepend: crumb_path | relative_url %}
+        {% assign crumb_parts = crumb | replace: '-', ' ' | replace: '%20', ' ' | split: " " %}
+        {% assign crumb_title = '' %}
+        {% for part in crumb_parts %}
+          {% assign crumb_title = part | capitalize | append: ' ' | prepend: crumb_title | trim %}
+        {% endfor %}
         <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-          <a href="{{ crumb | downcase | replace: '%20', '-' | prepend: path_type | prepend: crumb_path | relative_url }}" itemprop="item"><span itemprop="name">{{ crumb | replace: '-', ' ' | replace: '%20', ' ' | capitalize }}</span></a>
+          <a href="{{ crumb_path }}" itemprop="item"><span itemprop="name">{{ crumb_title }}</span></a>
           <meta itemprop="position" content="{{ i }}" />
         </li>
         <span class="sep">{{ site.data.ui-text[site.locale].breadcrumb_separator | default: "/" }}</span>
