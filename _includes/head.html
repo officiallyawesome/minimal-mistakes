@@ -13,6 +13,10 @@
 
 <!-- For all browsers -->
 <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
+{% if site.dark_mode %}
+<link rel="stylesheet" href="{{ '/assets/css/dark.css' | relative_url }}" media="(prefers-color-scheme: dark)">
+<link rel="stylesheet" href="{{ '/assets/css/light.css' | relative_url }}" media="(prefers-color-scheme: no-preference), (prefers-color-scheme: light)">
+{% endif %}
 
 <!--[if IE]>
   <style>

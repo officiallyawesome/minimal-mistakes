@@ -1,0 +1,12 @@
+---
+---
+
+:root {
+  @import "minimal-mistakes/skins/{{ site.dark_mode_skin_dark | default: 'dark' }}";
+  @import "minimal-mistakes/colors";
+  @include color-vars();
+}
+
+img:not([src*=".svg"]) {
+  filter: grayscale(25%);
+}

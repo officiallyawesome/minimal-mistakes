@@ -1,0 +1,8 @@
+---
+---
+
+:root {
+  @import "minimal-mistakes/skins/{{ site.dark_mode_skin_light | default: 'default' }}";
+  @import "minimal-mistakes/colors";
+  @include color-vars();
+}
