@@ -1,3 +1,23 @@
+{% if site.dark_mode %}
+<div class="page__footer-theme">
+  <ul aria-hidden="true">
+    <li><i class="fas fa-adjust" aria-hidden="true"></i></li>
+    <li>
+      <input name="colorscheme" value="auto" id="autoscheme" type="radio">
+      <label for="autoscheme">auto</label>
+    </li>
+    <li>
+      <input name="colorscheme" value="dark" id="darkscheme" type="radio">
+      <label for="darkscheme">dark</label>
+    </li>
+    <li>
+      <input name="colorscheme" value="light" id="lightscheme" type="radio">
+      <label for="lightscheme">light</label>
+    </li>
+  </ul>
+</div>
+{% endif %}
+
 <div class="page__footer-follow">
   <ul class="social-icons">
     {% if site.data.ui-text[site.locale].follow_label %}

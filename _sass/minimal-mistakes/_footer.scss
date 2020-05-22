@@ -10,8 +10,8 @@
   width: 100%;
   clear: both;
   margin-top: 3em;
-  color: $muted-text-color;
-  color: var(--muted-text-color, $muted-text-color);
+  color: $footer-text-color;
+  color: var(--footer-text-color, $footer-text-color);
   -webkit-animation: $intro-transition;
   animation: $intro-transition;
   -webkit-animation-delay: 0.45s;
@@ -45,8 +45,8 @@
   .fab,
   .far,
   .fal {
-    color: $muted-text-color;
-    color: var(--muted-text-color, $muted-text-color);
+    color: $footer-text-color;
+    color: var(--footer-text-color, $footer-text-color);
   }
 }
 
@@ -85,5 +85,44 @@
     a {
       white-space: nowrap;
     }
+  }
+}
+
+.page__footer-theme {
+  display: none;
+  float: right;
+
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+  }
+
+  li {
+    display: inline-block;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    font-family: $sans-serif-narrow;
+    font-size: $type-size-6;
+    text-transform: uppercase;
+  }
+
+  input {
+    display: none;
+  }
+
+  label {
+    font-weight: bold;
+    margin: 0 0.3em;
+    color: inherit;
+  }
+
+  input + label {
+    border-bottom: 3px solid transparent;
+  }
+
+  input:checked + label {
+    border-bottom: 3px solid $footer-text-color;
+    border-bottom-color: var(--footer-text-color, $footer-text-color);
   }
 }

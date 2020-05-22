@@ -17,6 +17,7 @@ $muted-text-color: mix(#fff, $text-color, 20%) !default;
 $border-color: $lighter-gray !default;
 $form-background-color: $lighter-gray !default;
 $footer-background-color: $lighter-gray !default;
+$footer-text-color: $muted-text-color !default;
 
 $primary-color: #6f777d !default;
 $success-color: #3fa63f !default;
@@ -99,6 +100,7 @@ $base0f: #ff5370 !default;
   --border-color: #{$border-color};
   --form-background-color: #{$form-background-color};
   --footer-background-color: #{$footer-background-color};
+  --footer-text-color: #{$footer-text-color};
 
   --primary-color: #{$primary-color};
   --success-color: #{$success-color};
