@@ -12,7 +12,7 @@ $pink-d100: #f6bcd9;
 /* Colors */
 $primary-color: $pink-d200 !default;
 
-$background-color: mix(#fff, $surface-color, 96%) !default;
+$background-color: mix(#fff, $surface-color, 95%) !default;
 
 $text-color: mix($surface-color, #fff, 87%) !default;
 $muted-text-color: mix($surface-color, #fff, 60%) !default;
@@ -25,7 +25,7 @@ $footer-text-color: $text-color !default;
 
 $link-color: $text-color !default;
 $link-color-hover: $muted-text-color !default;
-$link-color-visited: $disabled-text-color !default;
+$link-color-visited: $muted-text-color !default;
 $masthead-link-color: $text-color !default;
 $masthead-link-color-hover: $muted-text-color !default;
 $navicon-link-color-hover: mix(#000, $background-color, 30%) !default;
