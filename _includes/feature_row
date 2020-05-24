@@ -33,12 +33,12 @@
           {% if f.buttons %}
             <p>
             {% for b in f.buttons %}
-              <a href="{{ b.url | relative_url }}" class="btn {{ b.btn_class }}"{% if b.btn_target %} target="{{ b.btn_target }}"{% endif %}>{{ b.btn_label | default: site.data.ui-text[site.locale].more_label | default: "Learn More" }}{% if b.btn_icon %}<i class="{{ b.btn_icon }}"></i>{% endif %}</a>
+              <a href="{{ b.url | relative_url }}" class="btn {{ b.btn_class }}" {{ b.btn_attrs }}>{{ b.btn_label | default: site.data.ui-text[site.locale].more_label | default: "Learn More" }}{% if b.btn_icon %}<i class="{{ b.btn_icon }}"></i>{% endif %}</a>
             {% endfor %}
             </p>
           {% endif %}
           {% if f.url %}
-            <p><a href="{{ f.url | relative_url }}" class="btn {{ f.btn_class }}"{% if f.btn_target %} target="{{ f.btn_target }}"{% endif %}>{{ f.btn_label | default: site.data.ui-text[site.locale].more_label | default: "Learn More" }}{% if f.btn_icon %}<i class="{{ f.btn_icon }}"></i>{% endif %}</a></p>
+            <p><a href="{{ f.url | relative_url }}" class="btn {{ f.btn_class }}" {{ f.btn_attrs }}>{{ f.btn_label | default: site.data.ui-text[site.locale].more_label | default: "Learn More" }}{% if f.btn_icon %}<i class="{{ f.btn_icon }}"></i>{% endif %}</a></p>
           {% endif %}
         </div>
       </div>
