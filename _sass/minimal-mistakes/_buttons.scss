@@ -28,6 +28,10 @@
     margin-left: -0.5em; /* override for hidden text*/
   }
 
+  .svg-inline--fa {
+    margin-left: 0.5em;
+  }
+
   /* button colors */
   $buttoncolors:
   (primary, $primary-color),
