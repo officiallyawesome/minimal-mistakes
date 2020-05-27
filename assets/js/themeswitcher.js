@@ -1,6 +1,6 @@
 var DEFAULT_THEME = 'dark';
 var ALT_THEME = 'light';
-var STORAGE_KEY = 'theme';
+var STORAGE_KEY = 'css-theme';
 var colorscheme = document.getElementsByName('colorscheme');
 
 /* changes the active radiobutton */
@@ -14,11 +14,13 @@ function indicateTheme(mode) {
 
 /* turns alt stylesheet on/off */
 function applyTheme(mode) {
-  var active = document.getElementById(STORAGE_KEY + '-' + mode);
+  var activeMode = DEFAULT_THEME;
   var otherMode = ALT_THEME;
   if (mode == ALT_THEME) {
+    activeMode = ALT_THEME;
     otherMode = DEFAULT_THEME;
   }
+  var active = document.getElementById(STORAGE_KEY + '-' + activeMode);
   var other = document.getElementById(STORAGE_KEY + '-' + otherMode);
   active.setAttribute('media', 'all');
   other.setAttribute('media', 'speech');
