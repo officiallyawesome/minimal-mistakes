@@ -54,18 +54,22 @@ function autoTheme(e) {
   indicateTheme(indicate);
 }
 
-/* create an event listener for media query matches and run it immediately */
-var mql = window.matchMedia('(prefers-color-scheme: ' + ALT_THEME + ')');
-autoTheme(mql);
-mql.addListener(autoTheme);
+document.addEventListener('gdprCookiesEnabled', function(e) {
+  if (e.detail.performance) {
+    /* create an event listener for media query matches and run it immediately */
+    var mql = window.matchMedia('(prefers-color-scheme: ' + ALT_THEME + ')');
+    autoTheme(mql);
+    mql.addListener(autoTheme);
 
-/* set up listeners for radio button clicks */
-for (var i = colorscheme.length; i--;) {
-  colorscheme[i].onclick = setTheme;
-}
+    /* set up listeners for radio button clicks */
+    for (var i = colorscheme.length; i--;) {
+      colorscheme[i].onclick = setTheme;
+    }
 
-/* display theme switcher form(s) */
-var themeforms = document.getElementsByClassName("page__footer-theme");
-for (var i = themeforms.length; i--;) {
-  themeforms[i].style.display = 'inline-block';
-}
+    /* display theme switcher form(s) */
+    var themeforms = document.getElementsByClassName("page__footer-theme");
+    for (var i = themeforms.length; i--;) {
+      themeforms[i].style.display = 'inline-block';
+    }
+  }
+});
