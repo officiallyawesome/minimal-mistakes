@@ -514,19 +514,19 @@ function gdprCookieNotice(config) {
 //Add strings
 gdprCookieNoticeLocales.en = {
   description: 'We use cookies to offer you a better experience, personalise content, and to analyse our traffic.',
-  settings: 'Settings',
-  accept: 'Accept',
-  statement: 'Our cookie policy',
+  settings: 'Cookie settings',
+  accept: 'Accept cookies',
+  statement: 'Our cookie statement',
   save: 'Save settings',
   always_on: 'Always on',
   cookie_essential_title: 'Essential website cookies',
-  cookie_essential_desc: 'Necessary cookies help make a website usable by enabling basic functions like page navigation.',
+  cookie_essential_desc: 'Necessary cookies help make a website usable.',
   cookie_performance_title: 'Performance cookies',
-  cookie_performance_desc: 'These cookies are used to enhance the performance and functionality of our website but are non-essential to its use.',
+  cookie_performance_desc: 'These cookies are used to enhance the performance and functionality of our website but are non-essential to its use. For example we store your preferred theme.',
   cookie_analytics_title: 'Analytics cookies',
   cookie_analytics_desc: 'We use analytics cookies to help us measure how users interact with website content, which helps us customize our website for you in order to enhance your experience.',
   cookie_marketing_title: 'Marketing cookies',
-  cookie_marketing_desc: 'These cookies are used to make advertising messages more relevant to you and your interests.'
+  cookie_marketing_desc: 'These cookies are used to make some content more relevant to you and your interests.'
 }
 
 //# sourceMappingURL=gdpr-cookie-notice.js.map
