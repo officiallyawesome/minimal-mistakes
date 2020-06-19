@@ -11,7 +11,7 @@
       <div class="archive__item">
         {% if f.image_path %}
           <div class="archive__item-teaser">
-            {% if f.url %}<a href="{{ f.url | relative_url }}" {{ f.btn_attrs }}>{% endif %}
+            {% if f.url %}<a href="{{ f.url | relative_url }}" {{ f.url_attrs }}>{% endif %}
             <img src="{{ f.image_path | relative_url }}" alt="{% if f.alt %}{{ f.alt }}{% endif %}">
             {% if f.url %}</a>{% endif %}
             {% if f.image_caption %}
@@ -22,7 +22,7 @@
 
         <div class="archive__item-body">
           {% if f.title %}
-            {% if f.url %}<a href="{{ f.url | relative_url }}" {{ f.btn_attrs }}>{% endif %}
+            {% if f.url %}<a href="{{ f.url | relative_url }}" {{ f.url_attrs }}>{% endif %}
             <h2 class="archive__item-title">{{ f.title }}</h2>
             {% if f.url %}</a>{% endif %}
           {% endif %}
@@ -40,8 +40,8 @@
             {% endfor %}
             </p>
           {% endif %}
-          {% if f.url %}
-            <p><a href="{{ f.url | relative_url }}" class="btn {{ f.btn_class }}" {{ f.btn_attrs }}>{{ f.btn_label | default: site.data.ui-text[site.locale].more_label | default: "Learn More" }}{% if f.btn_icon %}<i class="{{ f.btn_icon }}"></i>{% endif %}</a></p>
+          {% if f.btn_url %}
+            <p><a href="{{ f.btn_url | relative_url }}" class="btn {{ f.btn_class }}" {{ f.btn_attrs }}>{{ f.btn_label | default: site.data.ui-text[site.locale].more_label | default: "Learn More" }}{% if f.btn_icon %}<i class="{{ f.btn_icon }}"></i>{% endif %}</a></p>
           {% endif %}
         </div>
       </div>
