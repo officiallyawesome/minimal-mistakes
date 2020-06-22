@@ -46,6 +46,17 @@
   margin-bottom: -0.5rem;
 }
 
+.site-logo-large img {
+  position: absolute;
+  max-height: 13rem;
+  margin-top: -0.3rem;
+  margin-left: -1rem;
+}
+
+.site-logo-large + .visible-links {
+  padding-left: 10rem;
+}
+
 .site-title {
   display: -webkit-box;
   display: -ms-flexbox;
