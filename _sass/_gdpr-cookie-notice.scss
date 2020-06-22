@@ -23,7 +23,7 @@ $icon_caret: 'data:image/svg+xml;utf8,<svg height="12" viewBox="0 0 8 12" width=
   padding: 20px;
   display: flex;
   align-items: center;
-  transition: all ease 1s;
+  transition: $global-transition;
   transform: translateY(100%);
   z-index: 1000;
 
@@ -183,7 +183,7 @@ $icon_caret: 'data:image/svg+xml;utf8,<svg height="12" viewBox="0 0 8 12" width=
           right: -17px;
           top: 50%;
           margin-top: -2px;
-          transition: all ease 0.3s;
+          transition: $global-transition;
 
           .open & {
             transform: rotate(180deg);
@@ -213,7 +213,7 @@ $icon_caret: 'data:image/svg+xml;utf8,<svg height="12" viewBox="0 0 8 12" width=
           box-shadow: inset 0px 0px 0px 1px $modal_icon;
           margin: 0 0 0 auto;
           position: relative;
-          transition: all ease 0.3s;
+          transition: $global-transition;
           cursor: pointer;
 
           &:after {
@@ -274,7 +274,7 @@ $icon_caret: 'data:image/svg+xml;utf8,<svg height="12" viewBox="0 0 8 12" width=
           position: relative;
 
           span {
-            transition: all ease 0.3s;
+            transition: $global-transition;
           }
 
           &:after {
@@ -286,7 +286,7 @@ $icon_caret: 'data:image/svg+xml;utf8,<svg height="12" viewBox="0 0 8 12" width=
             margin: 0;
             content: '';
             opacity: 0;
-            transition: all ease 0.3s;
+            transition: $global-transition;
             display: block;
             background: url($icon_checkmark) no-repeat center;
           }
