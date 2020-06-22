@@ -19,7 +19,7 @@
 {% if site.dark_mode %}
 <div class="page__footer-theme">
   <ul aria-hidden="true">
-    <li><span><i class="fas fa-adjust" aria-hidden="true"></i> Theme:</span></li>
+    <li><span><i class="iconify" data-icon="fa-solid:adjust" data-inline="false" aria-hidden="true"></i> Theme:</span></li>
     <li>
       <input name="colorscheme" value="auto" id="autoscheme" type="radio">
       <label for="autoscheme">auto</label>
@@ -36,4 +36,4 @@
 </div>
 {% endif %}
 
-<div class="page__footer-copyright">&copy; {{ site.time | date: '%Y' }} {{ site.name | default: site.title }}. {{ site.data.ui-text[site.locale].powered_by | default: "Powered by" }} <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>. <i class="fas fa-cookie-bite"></i> <a href="#" class="gdpr-cookie-notice-settings-button">Cookie Settings</a>.{% if site.footer.extra_text %} {{ site.footer.extra_text }}{% endif %}</div>
+<div class="page__footer-copyright">&copy; {{ site.time | date: '%Y' }} {{ site.name | default: site.title }}. {{ site.data.ui-text[site.locale].powered_by | default: "Powered by" }} <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>. <i class="iconify" data-icon="fa-solid:cookie-bite" data-inline="false"></i> <a href="#" class="gdpr-cookie-notice-settings-button">Cookie Settings</a>.{% if site.footer.extra_text %} {{ site.footer.extra_text }}{% endif %}</div>
