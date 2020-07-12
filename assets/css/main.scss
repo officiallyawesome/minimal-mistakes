@@ -14,7 +14,7 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    @import "minimal-mistakes/skins/{{ site.dark_mode_skin_dark | default: 'dark' }}";
+    @import "minimal-mistakes/skins/{{ site.dark_mode_skin | default: 'dark' }}";
     @import "minimal-mistakes/colors";
     @include color-vars();
   }
