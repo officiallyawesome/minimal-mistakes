@@ -134,16 +134,4 @@ $(document).ready(function() {
     }
   });
 
-  gdprCookieNotice({
-    locale: 'en', //This is the default value
-    timeout: 0, //Time until the cookie bar appears
-    expiration: 365, //This is the default value, in days
-    domain: 'officiallyawesome.uk', //If you run the same cookie notice on all subdomains, define the main domain starting with a .
-    implicit: false, //Accept cookies on scroll
-    statement: '/policy', //Link to your cookie statement page
-    performance: ['css-theme'], //Cookies in the performance category.
-    analytics: ['__utm.gif', '__utma', '__utmb', '__utmc', '__utmt', '__utmz'], //Cookies in the analytics category.
-    marketing: ['yt-remote-cast-installed', 'yt-remote-connected-devices', 'yt-remote-device-id', 'yt-remote-fast-check-period', 'yt-remote-session-app', 'yt-remote-session-name', ] //Cookies in the marketing category.
-  });
-
 });
